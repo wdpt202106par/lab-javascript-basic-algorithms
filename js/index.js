@@ -1,7 +1,10 @@
 /*
  * @author lotik
- * ironHack course first lab
  * 02/2021
+ *
+ * ironHack course first lab
+ * Each iterations is a function that return a string,
+ * then concatenate with another function and console log this last.
  */
 console.log("I'm ready");
 
@@ -17,8 +20,10 @@ const lengthDriver = driver.length;
 const lengthNavigator = navigator.length;
 function iteration1(driver, navigator) {
   // Iteration 1: Names and Input
-
-  return `The driver's name is ${driver}\nThe navigator's name is ${navigator}`;
+  return `
+    The driver's name is ${driver}
+    The navigator's name is ${navigator}
+    `;
 }
 
 // Iteration 2: Conditionals
