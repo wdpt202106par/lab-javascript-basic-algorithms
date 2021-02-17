@@ -6,6 +6,7 @@
  * Each iterations is a function that return a string,
  * then concatenate with another function and console log this last.
  */
+"use strict";
 console.log("I'm ready");
 
 //////// utils variable for all process
@@ -14,10 +15,7 @@ const possibleCase = {
   cas2: { hacker1: "Plop", hacker2: "PlopPLOP" },
   cas2: { hacker1: "PlopPLOP", hacker2: "Plop" },
 };
-let driver = possibleCase.cas1[0];
-let navigator = possibleCase.cas1[1];
-const lengthDriver = driver.length;
-const lengthNavigator = navigator.length;
+
 function iteration1(driver, navigator) {
   // Iteration 1: Names and Input
   return `
@@ -41,6 +39,8 @@ function iteration1(driver, navigator) {
  */
 function iteration2(driver, navigator) {
   // insert length in const to reuse with a readable name
+  const lengthDriver = driver.length;
+  const lengthNavigator = navigator.length;
 
   // compute with if to choose the message
   if (lengthDriver === lengthNavigator) {
@@ -61,13 +61,14 @@ function iteration3(driver, navigator) {
 
 //////// final function => return const string that's represent my lab ;o)
 function myLab() {
-  const labConsole = ``;
+  let labConsole = "";
   for (const cas in possibleCase) {
     if (Object.hasOwnProperty.call(possibleCase, cas)) {
       const element = possibleCase[cas];
-      labConsole += iteration1(cas.hacker1, cas.hacker2);
-      labConsole += iteration2(cas.hacker1, cas.hacker2);
-      labConsole += iteration3(cas.hacker1, cas.hacker2);
+      labConsole += iteration1(element.hacker1, element.hacker2);
+      labConsole += iteration2(element.hacker1, element.hacker2);
+      labConsole += iteration3(element.hacker1, element.hacker2);
+      labConsole += "\n\n";
     }
   }
   return labConsole;
