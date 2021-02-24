@@ -17,12 +17,15 @@ if (name_hacker1.length > name_hacker2.length){
 // Iteration 3: Loops
 let str = "";
 for (let i = 0; i < name_hacker1.length ; i++ ){
-  str = str + name_hacker1[i].toUpperCase() + " ";
+  str = str + name_hacker1[i].toUpperCase();
+  if (i !== name_hacker1.length -1){
+    str += " ";
+  }
 }
 console.log(str);
 
 let str2 = "";
-for (let i = name_hacker1.length; i >= 0 ; i-- ){
+for (let i = name_hacker1.length-1; i >= 0 ; i-- ){
   str2 = str2 + name_hacker1[i];
 }
 console.log(str2);
